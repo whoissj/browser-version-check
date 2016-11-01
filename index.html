@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" id="ng-app" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>browser version check</title>
+    <script type="text/javascript">
+        if (location.href.toString().indexOf('file://localhost/') == 0) {
+            location.href = location.href.toString().replace('file://localhost/', 'file:///');
+        }
+    </script>
+
+</head>
+<body>
+<div bowser-directive>
+</div>
+</body>
+<script src="//cdn.bootcss.com/angular.js/1.5.8/angular.min.js"></script>
+<script src="directive.js"></script>
+
+</html>
